@@ -1,0 +1,99 @@
+---
+title: "FML-811250075"
+output: html_document
+date: "2023-09-10"
+---
+#part1: importing the data
+#source of the data:https://www.kaggle.com/datasets/nelgiriyewithana/global-missing-migrants-dataset
+
+```{r }
+a<-read.csv("C:/Users/pushp/OneDrive/Desktop/Global MMD.csv")
+a
+```
+#part2**-descriptive statistics for quantitative variables
+
+```{r }
+summary(a)
+
+
+```
+
+
+```{r }
+mean(a$Number.of.Survivors)
+```
+
+
+```{r }
+median(a$Number.of.Survivors)
+
+```
+
+
+```{r }
+sum(a$Number.of.Survivors)
+
+```
+```{r}
+sum(a$Number.of.Survivors)
+
+```
+```{r}
+var(a$Number.of.Survivors)
+
+```
+```{r}
+max(a$Number.of.Survivors)
+
+```
+```{r}
+min(a$Number.of.Survivors)
+
+```
+```{r}
+str(a$Number.of.Survivors)
+
+```
+#part3**-descriptive statistics for categorical variables
+```{r}
+table(a$Region.of.Origin)
+
+```
+```{r}
+a$Region.of.Origin
+
+```
+```{r}
+table(a$Region.of.Incident)
+
+```
+```{r}
+str(a$Region.of.Origin)
+
+```
+#part4-transforming the variables
+```{r}
+
+log(a$Number.of.Survivors)
+
+```
+```{r}
+log(a$Total.Number.of.Dead.and.Missing)
+
+```
+```{r}
+b<-a$Number.of.Survivors-mean(a$Number.of.Survivors)/sd(a$Number.of.Survivors)
+
+b
+```
+#part5-plotting the one variables
+```{r}
+hist(a$Number.of.Survivors,main="HISTOGRAM OF Number.of.survivors")
+
+```
+#part6-scatterplot
+```{r}
+plot(a$Number.of.Survivors,a$Total.Number.of.Dead.and.Missing,main="scatterplot")
+
+```
+
